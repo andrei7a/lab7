@@ -57,7 +57,7 @@ public:
 
 
 
-template <class Type>	friend  Set  operator + <Type>(Set<Type>& x, Set<Type>& y) {
+	friend  Set  operator + <Type>(Set<Type>& x, Set<Type>& y) {
 		Set<Type> temp(x);
 		bool flag = 0;
 		for (int i = 0; i < y.num; i++)
@@ -130,8 +130,8 @@ template <class Type>	friend  Set  operator + <Type>(Set<Type>& x, Set<Type>& y)
 };
 void main() {
 
-
-	 Set <double> a;
+	cout << "------------------Working with double------------------" << endl;
+	Set <double> a;
 	cin >> a;
 	
 	Set <double> b;
@@ -157,5 +157,32 @@ void main() {
 	cout << "A[3]: " << a[2] << endl;
 	cout << "Int(A): " << int(a) << endl;
 
+
+	cout << "------------------Working with int------------------" << endl;
+	Set <int> a1;
+	cin >> a1;
+
+	Set <int> b1;
+	cin >> b1;
+
+	Set<int> c1;
+
+
+	cout << endl;
+	cout << "A: " << a1 << endl;
+	cout << "B: " << b1 << endl;
+	c1 = (a1 + b1);
+	cout << "A+B: " << c1 << endl;
+	cout << "A<=B: ";
+	if (a1 <= b1)
+	{
+		cout << "True" << endl;
+	}
+	else
+	{
+		cout << "False" << endl;
+	}
+	cout << "A[3]: " << a1[2] << endl;
+	cout << "Int(A): " << int(a1) << endl;
 
 }
